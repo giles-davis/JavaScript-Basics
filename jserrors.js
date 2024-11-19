@@ -1,12 +1,8 @@
-const a = 5;
-const b = 10;
-
-function add() {
-  return c;
-}
-
-function print() {
-  add();
-}
-
-print();
+try {
+    throw new SyntaxError("Hello");
+  } catch (e) {
+    console.log(e instanceof SyntaxError); // true
+    console.log(e.message); // "Hello"
+    console.log(e.name); // "SyntaxError"
+    console.log(e.stack); // Stack of the error
+  }
